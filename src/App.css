@@ -1,0 +1,264 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.app-name {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.app-subtitle {
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+    font-size: 1.125rem;
+    margin: -1rem 0 0 0;
+    opacity: 0.7;
+}
+
+.store-badges {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.store-badge {
+    width: auto;
+    transition: opacity 0.2s ease;
+}
+
+.store-badge:hover {
+    opacity: 0.8;
+}
+
+.play-store-badge {
+    height: 60px;
+}
+
+.app-store-badge {
+    height: 40px;
+}
+
+.page-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.page-container h1 {
+    margin-bottom: 1rem;
+}
+
+.page-container a {
+    margin-top: 2rem;
+    color: inherit;
+    opacity: 0.7;
+}
+
+.page-container a:hover {
+    opacity: 1;
+}
+
+/* App bar for subpages */
+.app-bar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: #f82414;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 100;
+}
+
+.app-bar .back-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: inherit;
+    opacity: 0.8;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.app-bar .back-button:hover {
+    opacity: 1;
+}
+
+.app-bar .back-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+.app-bar .app-bar-logo {
+    width: 24px;
+    height: 24px;
+}
+
+@media (prefers-color-scheme: light) {
+    .app-bar {
+        background-color: #ffffff;
+        border-bottom-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Legal pages (Terms, Privacy) */
+.legal-page {
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 2rem 4rem;
+}
+
+.legal-page h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.legal-page .last-updated {
+    opacity: 0.6;
+    font-size: 0.875rem;
+    margin-bottom: 2rem;
+}
+
+.legal-page section {
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.legal-page h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    margin-top: 0;
+}
+
+.legal-page h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+
+.legal-page p {
+    margin: 0 0 1rem;
+    line-height: 1.6;
+}
+
+.legal-page ul {
+    margin: 0 0 1rem;
+    padding-left: 1.5rem;
+}
+
+.legal-page li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.legal-page section a {
+    color: #646cff;
+    margin: 0;
+    opacity: 1;
+}
+
+.legal-page section a:hover {
+    text-decoration: underline;
+}
+
+/* Support page */
+.support-page {
+    gap: 1.5rem;
+}
+
+.support-page p {
+    font-size: 1.125rem;
+    margin: 0;
+}
+
+.email-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #00695c;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    margin-top: 0 !important;
+    opacity: 1 !important;
+}
+
+.email-button:hover {
+    background-color: #00554a;
+    opacity: 1 !important;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.5rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.footer a:hover {
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.footer-copyright {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.75rem;
+}
+
+@media (prefers-color-scheme: light) {
+    .footer a {
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    .footer a:hover {
+        color: rgba(0, 0, 0, 0.8);
+    }
+
+    .footer-copyright {
+        color: rgba(0, 0, 0, 0.4);
+    }
+}
