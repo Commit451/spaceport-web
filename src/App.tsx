@@ -17,7 +17,7 @@ function ScrollToTop() {
 
 function App() {
     return (
-        <BrowserRouter basename="/spaceport-web">
+        <BrowserRouter>
             <ScrollToTop/>
             <div className="app-container">
                 <Routes>

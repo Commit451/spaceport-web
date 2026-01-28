@@ -15,6 +15,5 @@ const copy404Plugin = () => ({
 
 // https://vite.dev/config/
 export default defineConfig({
-    base: '/spaceport-web/',
     plugins: [react(), copy404Plugin()],
 })
