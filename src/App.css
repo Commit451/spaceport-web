@@ -9,7 +9,8 @@
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding: 4rem 2rem;
 }
 
 .logo {
@@ -37,6 +38,118 @@
     font-size: 1.125rem;
     margin: -1rem 0 0 0;
     opacity: 0.7;
+}
+
+.cards-container {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: 220px;
+    text-align: left;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.card:hover:not(.card-disabled) {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffcccb;
+}
+
+.card-disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.75rem;
+}
+
+.card-title {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.card-description {
+    font-size: 0.875rem;
+    margin: 0;
+    opacity: 0.8;
+    line-height: 1.4;
+}
+
+.lorem-text {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    max-width: 800px;
+    text-align: center;
+    margin-top: 3rem;
+    opacity: 0.8;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: inherit;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffcccb;
+}
+
+.social-link svg {
+    width: 24px;
+    height: 24px;
+}
+
+@media (prefers-color-scheme: light) {
+    .social-link {
+        background: rgba(0, 0, 0, 0.05);
+        border-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .social-link:hover {
+        background: rgba(0, 0, 0, 0.08);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .card {
+        background: rgba(0, 0, 0, 0.05);
+        border-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .card:hover:not(.card-disabled) {
+        background: rgba(0, 0, 0, 0.08);
+    }
 }
 
 .store-badges {
@@ -184,9 +297,7 @@
 }
 
 .legal-page section a {
-    color: #646cff;
     margin: 0;
-    opacity: 1;
 }
 
 .legal-page section a:hover {

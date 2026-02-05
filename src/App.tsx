@@ -30,7 +30,7 @@ function App() {
                         <Link to="/privacy">Privacy</Link>
                         <Link to="/terms">Terms</Link>
                     </div>
-                    <div className="footer-copyright">© 2025 Commit 451</div>
+                    <div className="footer-copyright">© 2026 Commit 451</div>
                 </footer>
             </div>
         </BrowserRouter>
