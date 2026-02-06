@@ -1,5 +1,6 @@
 import logo from '../assets/logo.png'
 import slicerLogo from '../assets/slicer-logo.svg'
+import mirrorLogo from '../assets/mirror-logo.svg'
 
 function Home() {
     return (
@@ -15,10 +16,11 @@ function Home() {
                         <h2 className="card-title">Slicer</h2>
                         <p className="card-description">Drop an image, grab 4 vertical slices.</p>
                     </a>
-                    <div className="card card-disabled">
-                        <h2 className="card-title">Coming soon...</h2>
-                        <p className="card-description">Stay tuned</p>
-                    </div>
+                    <a href="https://mirror.spaceport.work/" className="card" target="_blank" rel="noopener noreferrer">
+                        <img src={mirrorLogo} className="card-icon" alt="Mirror"/>
+                        <h2 className="card-title">Mirror</h2>
+                        <p className="card-description">Fast, free, hosted on Cloudflare</p>
+                    </a>
                     <div className="card card-disabled">
                         <h2 className="card-title">Coming soon...</h2>
                         <p className="card-description">Stay tuned</p>
