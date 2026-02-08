@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 import logo from '../assets/logo.png'
 import slicerLogo from '../assets/slicer-logo.svg'
 import mirrorLogo from '../assets/mirror-logo.svg'
@@ -21,15 +22,126 @@ function Home() {
                         <h2 className="card-title">Mirror</h2>
                         <p className="card-description">Fast, free, hosted on Cloudflare</p>
                     </a>
-                    <div className="card card-disabled">
-                        <h2 className="card-title">Coming soon...</h2>
-                        <p className="card-description">Stay tuned</p>
-                    </div>
                 </div>
 
                 <p className="lorem-text">
                     451 times more committed to creating apps with form and function for a delightful experience inspired by user instinct.
                 </p>
+
+                {/* What We Build */}
+                <div className="home-section">
+                    <h2 className="home-section-title">What We Build</h2>
+                    <p className="home-section-subtitle">
+                        We focus on three areas where software can be simpler, faster, and more useful.
+                    </p>
+                    <div className="home-section-grid">
+                        <div className="feature-card">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                            <h3>Web Applications</h3>
+                            <p>
+                                Lightweight, focused web apps that do one thing exceptionally well. No bloat, no
+                                unnecessary features — just clean tools that respect your time.
+                            </p>
+                        </div>
+                        <div className="feature-card">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                <polyline points="16 18 22 12 16 6"/>
+                                <polyline points="8 6 2 12 8 18"/>
+                            </svg>
+                            <h3>Developer Tools</h3>
+                            <p>
+                                Utilities and libraries that make development faster and more enjoyable. Built by
+                                developers, for developers, with real-world workflows in mind.
+                            </p>
+                        </div>
+                        <div className="feature-card">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                            <h3>Open Source</h3>
+                            <p>
+                                We contribute to the open source ecosystem with libraries, components, and tools that
+                                anyone can use, modify, and improve.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Our Approach */}
+                <div className="home-section">
+                    <h2 className="home-section-title">Our Approach</h2>
+                    <div className="approach-block">
+                        <img
+                            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80"
+                            alt="Team collaboration"
+                            className="approach-image"
+                        />
+                        <div className="approach-text">
+                            <p>
+                                We believe great software starts with understanding people. Before writing a single
+                                line of code, we ask: what problem are we solving, and what is the simplest way to
+                                solve it? This user-first philosophy shapes every decision, from architecture to
+                                interface design.
+                            </p>
+                            <p>
+                                Our engineering process favors small, fast, maintainable codebases over sprawling
+                                frameworks. We choose tools that produce lightweight bundles and fast load times. We
+                                test on real devices under real conditions. The result is software that feels instant
+                                and works everywhere.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* From the Blog */}
+                <div className="home-section">
+                    <h2 className="home-section-title">From the Blog</h2>
+                    <p className="home-section-subtitle">
+                        Thoughts on design, engineering, and building software that matters.
+                    </p>
+                    <div className="blog-grid">
+                        <Link to="/blog/minimalist-design" className="blog-card">
+                            <img
+                                src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&q=80"
+                                alt="Minimalist design"
+                                className="blog-card-image"
+                            />
+                            <div className="blog-card-body">
+                                <p className="blog-card-date">January 20, 2026</p>
+                                <h3 className="blog-card-title">The Art of Minimalist Design in Software</h3>
+                                <p className="blog-card-excerpt">Why less is more in UI/UX — removing clutter and focusing on core user needs.</p>
+                            </div>
+                        </Link>
+                        <Link to="/blog/user-experience" className="blog-card">
+                            <img
+                                src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600&q=80"
+                                alt="User experience"
+                                className="blog-card-image"
+                            />
+                            <div className="blog-card-body">
+                                <p className="blog-card-date">January 12, 2026</p>
+                                <h3 className="blog-card-title">Why User Experience Should Drive Every Decision</h3>
+                                <p className="blog-card-excerpt">How UX informs architecture and the cost of getting it wrong.</p>
+                            </div>
+                        </Link>
+                        <Link to="/blog/building-for-performance" className="blog-card">
+                            <img
+                                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80"
+                                alt="Performance engineering"
+                                className="blog-card-image"
+                            />
+                            <div className="blog-card-body">
+                                <p className="blog-card-date">December 28, 2025</p>
+                                <h3 className="blog-card-title">Building for Performance</h3>
+                                <p className="blog-card-excerpt">Fast load times, lightweight apps, and why performance is accessibility.</p>
+                            </div>
+                        </Link>
+                    </div>
+                </div>
 
                 <div className="social-links">
                     <a href="https://x.com/Commit451" className="social-link" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
